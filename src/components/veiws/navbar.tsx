@@ -1,16 +1,26 @@
 import Link from "next/link";
 import { Search, ShoppingCart } from "lucide-react";
 import { Button } from "../ui/button";
-
+import Image from "next/image";
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center p-3 bg-zinc-400 ">
-      <div className="flex gap-5">
+    <nav className=" flex justify-between items-center ">
+      <Link href={"/"}>
+        <Image
+          src={"/logo.webp"}
+          width={140}
+          height={25}
+          alt="logo"
+          className=" object-cover flex-nonwrap"
+        />
+      </Link>
+      <div className="flex gap-3 text-xl sm:invisible :visible">
         <Link href={"/#"}>Female</Link>
         <Link href={"/#"}>Male</Link>
         <Link href={"/#"}>Kids</Link>
         <Link href={"/#"}>All Products</Link>
       </div>
+
       <div className="flex">
         <Search className="bg-white rounded-l" />
         <input
@@ -19,12 +29,15 @@ export default function Navbar() {
           className="rounded-r"
         ></input>
       </div>
-      <div className="p-2 rounded-full bg-gray-300">
-        <ShoppingCart className="relative" />
-        <span className="absolute top-2 right-20 h-6 w-6 text-center rounded-full bg-[#f02d34] text-white">
+      <Link
+        href={"/shopingCart"}
+        className="transition  transform ease-in-out hover:-translate-y-1 hover:scale-110   duration-500  p-3 rounded-full bg-gray-300 "
+      >
+        <ShoppingCart className="relative " />
+        <span className="absolute top-0 h-[18px] w-[18px] text-center rounded-full bg-[#f02d34] text-white text-sm">
           0
         </span>
-      </div>
+      </Link>
     </nav>
   );
 }
