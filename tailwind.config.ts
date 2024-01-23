@@ -20,7 +20,7 @@ const config = {
     },
     extend: {
       screens: {
-        "mdm": "800px",
+        "mdm": "850px",
       },
       colors: {
         border: "hsl(var(--border))",

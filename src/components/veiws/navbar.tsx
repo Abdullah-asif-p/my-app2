@@ -1,41 +1,43 @@
+"use client";
 import Link from "next/link";
-import { Search, ShoppingCart, MenuIcon } from "lucide-react";
-import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import { Search, ShoppingCart } from "lucide-react";
 import { Button } from "../ui/button";
+import { useState } from "react";
+import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import SearchIcon from "../icons/searchIcon";
 import Image from "next/image";
+
 export default function Navbar() {
+  const [buttonState, setButtonState] = useState(false);
   return (
-    <nav className=" flex justify-between items-center p-8 lg:p-16">
-      <Link href={"/"} className=" flex-shrink-0">
-        <Image
-          src={"/Logo.png"}
-          width={140}
-          height={25}
-          alt="logo"
-          className="max-w-full"
-        />
+    <nav className="flex justify-between items-center p-8 md:p-12">
+      <Link href={"/"} className="flex-shrink-0 mr-2">
+        <Image src={"/Logo.png"} alt="Logo" width={150} height={25} />
       </Link>
-      <div className="lg:gap-5 md:gap-3 text-xl hidden mdm:flex">
+
+      <div className="hidden mdm:flex  gap-4 lg:gap-[4.75rem]">
         <Link href={"/#"}>Female</Link>
         <Link href={"/#"}>Male</Link>
         <Link href={"/#"}>Kids</Link>
         <Link href={"/#"}>All Products</Link>
       </div>
-      <Button className="nav_btn hover:bg-white mdm:hidden">
-        <RiMenu3Line className=" text-black text-xl" />
-      </Button>
+      <SearchIcon />
 
-      <div className="flex">
-        <Search className="bg-white rounded-l" />
-        <input
-          type="text"
-          placeholder="What you are looking for"
-          className="rounded-r"
-        ></input>
+      <div className="relative flex mdm:hidden">
+        {!buttonState && (
+          <button type="button" onClick={() => setButtonState(true)}>
+            <RiMenu3Line fontSize={27} />
+          </button>
+        )}
+        {buttonState && (
+          <button type="button" onClick={() => setButtonState(false)}>
+            <RiCloseLine fontSize={27} />
+          </button>
+        )}
       </div>
       <Link
         href={"/shopingCart"}
-        className="transition  transform ease-in-out hover:-translate-y-1 hover:scale-110   duration-500  p-3 rounded-full bg-gray-300 "
+        className="  hidden mdm:flex transition  transform ease-in-out hover:-translate-y-1 hover:scale-110   duration-500  p-3 rounded-full bg-gray-300 "
       >
         <ShoppingCart className="relative" />
         <span className="absolute top-0 right-0 h-[18px] w-[18px] text-center rounded-full bg-[#f02d34] text-white text-sm">
