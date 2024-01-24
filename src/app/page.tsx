@@ -1,7 +1,12 @@
+import Hero from "@/components/veiws/hero";
+import Products from "@/components/veiws/products";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>now</div>
+    <div>
+      <Hero />
+      <Products />
+    </div>
   );
 }

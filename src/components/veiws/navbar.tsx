@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Search, ShoppingCart } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { Button } from "../ui/button";
 import { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
@@ -10,12 +10,12 @@ import Image from "next/image";
 export default function Navbar() {
   const [buttonState, setButtonState] = useState(false);
   return (
-    <nav className="flex justify-between items-center p-8 md:p-12">
-      <Link href={"/"} className="flex-shrink-0 mr-2">
+    <nav className="flex  relative justify-between items-center p-4 md:p-6 gap-4 ">
+      <Link href={"/"} className="flex-shrink-0  ml-16 ">
         <Image src={"/Logo.png"} alt="Logo" width={150} height={25} />
       </Link>
 
-      <div className="hidden mdm:flex  gap-4 lg:gap-[4.75rem]">
+      <div className="hidden mdm:flex gap-4 lg:gap-[3rem]">
         <Link href={"/#"}>Female</Link>
         <Link href={"/#"}>Male</Link>
         <Link href={"/#"}>Kids</Link>
