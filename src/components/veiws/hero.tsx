@@ -5,24 +5,24 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <header className="relative flex justify-between gap-16 mt-16 mx-24">
-      <div className="flex flex-1 flex-col justify-between pt-12 pb-4 ">
-        <div className=" flex flex-col justify-center gap-8 ">
-          <span className="bg-blue-100 w-[25%]  font-semibold text-center text-blue-800 rounded-md p-2 ">
+    <header className="relative flex justify-between gap-16 mt-16 mx-32">
+      <div className="flex flex-1 flex-col justify-between ">
+        <div className=" flex flex-col justify-center gap-10 ">
+          <span className="flex items-center justify-center bg-blue-100 h-[40px] w-[120px]  font-semibold  text-blue-800 rounded-md p-2 ">
             Sale 70%
           </span>
-          <h1 className=" text-6xl font-bold">
+          <h1 className=" text-[3.5rem] font-bold tracking-[0.003rem]">
             An Industrial Take on Streetwear
           </h1>
-          <p className="w-[60%]  text-gray-500">
+          <p className="w-[70%]  text-gray-500">
             Anyone can beat you but no one can beat your outfit as long as you
             wear Dine outfits.
           </p>
           <Link
             href={"/allProduct"}
-            className="flex items-center gap-2 transition  transform ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 text-white border-gray-400 border-2 text-lg bg-gray-900 font-semibold w-[35%] text-center p-2 "
+            className="flex items-center gap-2 transition  transform ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 text-white border-gray-400 border-2 text-lg bg-gray-900 font-semibold w-[35%] text-center p-4 "
           >
-            <ShoppingCart className="ml-2" />
+            <ShoppingCart className="" />
             Start Shoping
           </Link>
         </div>
@@ -53,14 +53,14 @@ export default function Hero() {
           />
         </div>
       </div>
-      <div className="hidden flex-1 lg:flex ">
-        <div className="w-[600px] h-[600px] absolute top-[-5%] right-[-3%] bg-[#FFECE3] rounded-[50%] ">
+      <div className="hidden mdm:flex flex-1">
+        <div className="w-[600px] h-[600px]   bg-[#FFECE3] rounded-[50%] header-circle">
           <Image
             src={"/Images/header.png"}
             alt="header"
             height={650}
             width={650}
-            className=" h-[650px] absolute top-[-5%] "
+            className="object-cover w-[650px] h-[650px] absolute top-[-5%] "
           />
         </div>
       </div>

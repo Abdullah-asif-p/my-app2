@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function Products() {
   return (
-    <section className="pt-16 px-24">
+    <section className="pt-16 px-32">
       <div className=" flex flex-col gap-4 mb-12 text-center">
         <span className=" text-blue-600 tracking-widest font-extrabold text-sm font-mono">
           PROMOTIONS

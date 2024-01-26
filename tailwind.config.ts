@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
       screens: {
-        mdm: "910px",
+        mdm: "1000px",
       },
       fontSize: {},
       colors: {
