@@ -11,7 +11,7 @@ export default function Navbar() {
   const [buttonState, setButtonState] = useState(false);
   return (
     <nav className="flex  relative justify-between items-center p-4 md:p-6 gap-4 ">
-      <Link href={"/"} className="flex-shrink-0  ml-16 ">
+      <Link href={"/"} className="flex-shrink-0 ml-4 sm:ml-16 ">
         <Image src={"/Logo.png"} alt="Logo" width={150} height={25} />
       </Link>
 

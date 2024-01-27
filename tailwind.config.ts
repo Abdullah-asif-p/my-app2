@@ -19,9 +19,14 @@ const config = {
     },
     extend: {
       screens: {
-        mdm: "1000px",
+        mdm: "1070px",
       },
-      fontSize: {},
+      fontSize: {
+        lgx: ["3.5rem", "55px"],
+      },
+      flex: {
+        "2": "2 2 0%",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
