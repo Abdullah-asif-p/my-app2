@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Products2() {
   return (
     <section className=" px-8  pt-16 sm:px-24 sm:pt-32">
-      <div className=" flex flex-col gap-4 mb-14 text-center">
+      <div className=" flex flex-col gap-4 mb-14 items-center justify-center ">
         <span className=" text-blue-600 tracking-widest font-extrabold text-sm font-mono">
           PROMOTIONS
         </span>
@@ -39,9 +39,9 @@ export default function Products2() {
         </div>
         <div className="flex flex-1 flex-row gap-2 sm:gap-8  justify-between mdm:justify-evenly items-center">
           <div className="bg-zinc-200">
-            <div className="p-1 sm:p-5">
-              <p>Flex Sweatshirt</p>
-              <span className="text-sm sm:text-base  line-through font-light">
+            <div className="p-1 sm:p-3">
+              <p className=" text-base sm:text-lg ">Flex Sweatshirt</p>
+              <span className="text-sm sm:text-base line-through font-light">
                 $100.00
               </span>
               <span className="text-sm sm:text-lg  ml-1">$75.00</span>
@@ -50,14 +50,14 @@ export default function Products2() {
               src={"/Images/event2.png"}
               alt="img"
               width={280}
-              height={340}
-              className="object-contain sm:object-none sm:h-[340px] sm:w-[280px] pt-1"
+              height={360}
+              className="object-cover sm:object-none sm:h-[360px] sm:w-[280px] pt-1"
             />
           </div>
           <div className="bg-zinc-200">
             <div className="flex flex-col justify-between">
-              <div className=" p-1 sm:p-5">
-                <p className=" text-base sm:text-sm ">Flex Sweatshirt</p>
+              <div className=" p-1 sm:p-3">
+                <p className=" text-base sm:text-lg ">Flex Sweatshirt</p>
                 <span className="text-sm sm:text-base line-through font-light">
                   $225.00
                 </span>
@@ -67,8 +67,8 @@ export default function Products2() {
                 src={"/Images/event3.png"}
                 alt="img"
                 width={280}
-                height={340}
-                className="object-contain sm:object-none sm:h-[340px] sm:w-[280px] pt-1"
+                height={360}
+                className="object-fit sm:object-none sm:h-[360px] sm:w-[280px] pt-1"
               />
             </div>
           </div>
