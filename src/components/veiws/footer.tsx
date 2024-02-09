@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -54,7 +55,9 @@ export default function Footer() {
               color is the actual natural color of the fiber, undyed and 100%
               traceable.
             </p>
-            <button className=" bg-black text-white w-[60%] p-1 text-lg">See All Products</button>
+            <button className=" bg-black text-white w-[45%] p-1 ml-4 text-lg rounded-md transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-500">
+              <Link href={"/allProduct"}>See All Products</Link>
+            </button>
           </div>
         </div>
       </div>
