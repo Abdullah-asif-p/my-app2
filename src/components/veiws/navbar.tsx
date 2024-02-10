@@ -16,10 +16,10 @@ export default function Navbar() {
       </Link>
 
       <div className="hidden mdm:flex gap-4 lg:gap-[3rem]">
-        <Link href={"/#"}>Female</Link>
-        <Link href={"/#"}>Male</Link>
-        <Link href={"/#"}>Kids</Link>
-        <Link href={"/#"}>All Products</Link>
+        <Link href={"/female"}>Female</Link>
+        <Link href={"/male"}>Male</Link>
+        <Link href={"/kids"}>Kids</Link>
+        <Link href={"/allProducts"}>All Products</Link>
       </div>
       <SearchIcon />
 

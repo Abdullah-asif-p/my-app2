@@ -2,12 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 export default function End() {
   return (
-    <div className="flex flex-row px-8 pt-8 sm:px-24 sm:pt-24 mb-24">
-      <div className=" flex flex-col">
+    <div className="flex flex-row items-start justify-between px-16 pt-8 sm:pr-80 sm:pl-24 sm:pt-24 mb-24">
+      <div className=" flex flex-col gap-14">
         <Link href={"/"} className="flex-shrink-0">
-          <Image src={"/Logo.png"} alt="Logo" width={150} height={25} />
+          <Image src={"/Logo.png"} alt="Logo" width={200} height={40} />
         </Link>
-        <p className=" my-12">
+        <p className="">
           Small, artisan label that offers a thoughtfully curated collection of
           high quality everyday essentials made.
         </p>
@@ -50,13 +50,24 @@ export default function End() {
           </Link>
         </div>
       </div>
-      <div className=" flex flex-col items-start justify-start pt-5 px-10 gap-4">
-        <h3 className="">Company</h3>
-        <p>About</p>
-        <p>Terms of Use</p>
-        <p>Privacy Policy</p>
-        <p>How it Works</p>
-        <p>Contact Us</p>
+      <div className=" flex flex-col items-start justify-start pt-4 gap-4 text-gray-500">
+        <h3 className="text-xl font-bold ">Company</h3>
+        <Link href={"/"}>About</Link>
+        <Link href={"/"}>Terms of Use</Link>
+        <Link href={"/"}>Privacy Policy</Link>
+        <Link href={"/"}>How it Works</Link>
+        <Link href={"/"}>Contact Us</Link>
+      </div>
+      <div className=" flex flex-col items-start justify-start pt-4  gap-4 text-gray-500">
+        <h3 className="text-xl font-bold ">Support</h3>
+        <Link href={"/"}>Support Carrer</Link>
+        <Link href={"/"}>24h Service</Link>
+        <Link href={"/"}>Quick Chat</Link>
+      </div>
+      <div className=" flex flex-col items-start justify-start pt-4 gap-4 text-gray-500">
+        <h3 className="text-xl font-bold ">Contact</h3>
+        <Link href={"/"}>Whatsapp</Link>
+        <Link href={"/"}>Support 24h</Link>
       </div>
     </div>
   );
