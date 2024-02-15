@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 export default function End() {
   return (
-    <div className="flex flex-row items-start justify-between px-16 pt-8 sm:pr-80 sm:pl-24 sm:pt-24 mb-24">
-      <div className=" flex flex-col gap-14">
+    <div className="flex lg:flex-row flex-col items-start justify-between gap-16 xl:px-24 sm:px-11 px-8 pt-8  sm:pt-24 mb-24">
+      <div className=" flex flex-col gap-14 w-1/2">
         <Link href={"/"} className="flex-shrink-0">
           <Image src={"/Logo.png"} alt="Logo" width={200} height={40} />
         </Link>
@@ -50,7 +50,7 @@ export default function End() {
           </Link>
         </div>
       </div>
-      <div className=" flex flex-col items-start justify-start pt-4 gap-4 text-gray-500">
+      <div className=" flex flex-col  pt-4 gap-4 text-gray-500">
         <h3 className="text-xl font-bold ">Company</h3>
         <Link href={"/"}>About</Link>
         <Link href={"/"}>Terms of Use</Link>
@@ -58,13 +58,13 @@ export default function End() {
         <Link href={"/"}>How it Works</Link>
         <Link href={"/"}>Contact Us</Link>
       </div>
-      <div className=" flex flex-col items-start justify-start pt-4  gap-4 text-gray-500">
+      <div className=" flex flex-col  pt-4  gap-4 text-gray-500">
         <h3 className="text-xl font-bold ">Support</h3>
         <Link href={"/"}>Support Carrer</Link>
         <Link href={"/"}>24h Service</Link>
         <Link href={"/"}>Quick Chat</Link>
       </div>
-      <div className=" flex flex-col items-start justify-start pt-4 gap-4 text-gray-500">
+      <div className=" flex flex-col pt-4 gap-4 text-gray-500">
         <h3 className="text-xl font-bold ">Contact</h3>
         <Link href={"/"}>Whatsapp</Link>
         <Link href={"/"}>Support 24h</Link>

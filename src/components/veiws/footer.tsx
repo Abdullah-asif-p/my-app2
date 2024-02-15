@@ -3,62 +3,57 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="relative">
-      <h1 className="absolute top-[-5%] right-0  text-3xl sm:text-4xl 2xl:text-5xl  text-right font-semibold">
+    <div className="relative flex flex-col mdm:flex-row items-center justify-center bg-slate-50 px-8  pt-16 md:px-24 md:py-4 gap-24 2xl::gap-80 2xl:gap-96">
+      <h1 className="absolute top-[-7%] right-0   text-3xl sm:text-4xl 2xl:text-5xl  text-right font-semibold">
         Unique and Authentic Vintage Designer Jewellery
       </h1>
-
-      <div className=" flex flex-col md:flex-row justify-center items-center bg-slate-50 px-8  pt-16 md:px-32 md:py-16 gap-20 md:gap-40">
-        <div className=" relative flex items-center justify-center mdm:w-[70%] w-full">
-          <div className="flex justify-between items-center">
-            <div className="absolute inset-0 flex items-center justify-center  text-gray-300 mdm:text-[6.875rem] mdm:leading-[110px] opacity-45 text-6xl font-extrabold">
-              Different from others
+      <div className="relative">
+        <div className="flex justify-between items-center">
+          <div className="absolute inset-0 flex items-center justify-center  text-gray-200 text-[5.5rem] mdm:text-[6.875rem] mdm:leading-[110px] opacity-45  font-extrabold">
+            <p>Different from others</p>
+          </div>
+          <div className="grid grid-cols-2 gap-16 2xl:gap-32">
+            <div className=" flex flex-col gap-2 w-60 mdm:w-40">
+              <h3 className="text-lg font-semibold ">
+                Using Good Quality Materials
+              </h3>
+              <p>Lorem ipsum dolor sit amt, consectetur adipiscing elit.</p>
             </div>
-            <div className="grid grid-cols-2 gap-20 mdm:gap-32">
-              <div className=" flex flex-col gap-2">
-                <h3 className="text-lg font-semibold">
-                  Using Good Quality Materials
-                </h3>
-                <p>Lorem ipsum dolor sit amt, consectetur adipiscing elit.</p>
-              </div>
-              <div className=" flex flex-col gap-2">
-                <h3 className="text-lg font-semibold">
-                  100% Handmade Products
-                </h3>
-                <p>Lorem ipsum dolor sit amt, consectetur adipiscing elit.</p>
-              </div>
-              <div className=" flex flex-col gap-2">
-                <h3 className="text-lg font-semibold">Modern Fashion Design</h3>
-                <p>Lorem ipsum dolor sit amt, consectetur adipiscing elit.</p>
-              </div>
-              <div className=" flex flex-col gap-2">
-                <h3 className="text-lg font-semibold">
-                  Discount for Bulk Orders
-                </h3>
-                <p>Lorem ipsum dolor sit amt, consectetur adipiscing elit.</p>
-              </div>
+            <div className=" flex flex-col gap-2  mdm:w-40">
+              <h3 className="text-lg font-semibold">100% Handmade Products</h3>
+              <p>Lorem ipsum dolor sit amt, consectetur adipiscing elit.</p>
+            </div>
+            <div className=" flex flex-col gap-2   mdm:w-40">
+              <h3 className="text-lg font-semibold">Modern Fashion Design</h3>
+              <p>Lorem ipsum dolor sit amt, consectetur adipiscing elit.</p>
+            </div>
+            <div className=" flex flex-col gap-2  mdm:w-40">
+              <h3 className="text-xl font-semibold">
+                Discount for Bulk Orders
+              </h3>
+              <p>Lorem ipsum dolor sit amt, consectetur adipiscing elit.</p>
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 ">
-          <Image
-            src={"/footer1.webp"}
-            alt="Image"
-            width={300}
-            height={350}
-            className=" "
-          />
-          <div className=" flex flex-col gap-4">
-            <p>
-              This piece is ethically crafted in our small family-owned workshop
-              in Peru with unmatched attention to detail and care. The Natural
-              color is the actual natural color of the fiber, undyed and 100%
-              traceable.
-            </p>
-            <button className=" bg-black text-white w-[45%] p-1 ml-4 text-lg rounded-md transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-500">
-              <Link href={"/allProduct"}>See All Products</Link>
-            </button>
-          </div>
+      </div>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-10">
+        <Image
+          src={"/footer1.webp"}
+          alt="Image"
+          width={300}
+          height={350}
+          className="h-[350px] w-[300px]"
+        />
+        <div className=" flex flex-col gap-4">
+          <p className=" md:w-60 ">
+            This piece is ethically crafted in our small family-owned workshop
+            in Peru with unmatched attention to detail and care. The Natural
+            color is the actual natural color of the fiber, undyed and 100%
+            traceable.
+          </p>
+          <button className=" bg-black text-white p-1 ml-4 text-lg rounded-md transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-500">
+            <Link href={"/allProduct"}>See All Products</Link>
+          </button>
         </div>
       </div>
     </div>

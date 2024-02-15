@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <header className="relative flex justify-between gap-16 mt-16 mx-8 sm:mt-16 sm:mx-24 ">
+    <header className="relative flex justify-between gap-16 mt-16  sm:mt-16 xl:px-24 sm:px-11 px-8 ">
       <div className="flex flex-1 flex-col justify-between ">
         <div className="flex flex-col justify-center gap-10">
           <span className="flex items-center justify-center bg-blue-100 h-[40px] w-[120px]  font-semibold  text-blue-800 rounded-md p-2  ">
