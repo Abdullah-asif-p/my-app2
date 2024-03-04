@@ -1,7 +1,7 @@
 // Import necessary functions and components
 import { defineType } from "sanity";
 import { BiUser } from "react-icons/bi";
-import CustomInputSlug from "../lib/slugInput";
+import { isUniqueAcrossAllDocuments } from "../lib/isUniqueAll";
 
 // Define the product type with its fields
 const productType = defineType({
@@ -22,29 +22,76 @@ const productType = defineType({
       name: "slug",
       title: "Slug",
       type: "slug",
-      validation: (rule) => rule.required(),
+
       options: {
-        source: "productName",
-        slugify: (input: string) => input.toLowerCase(),
+        source: "productName", // Generate slug based on productName
+        maxLength: 200,
+        isUnique: isUniqueAcrossAllDocuments,
+        slugify: (input) =>
+          input.toLowerCase().replace(/\s+/g, "-").slice(0, 200), // Generate slug from productName
       },
-      inputComponent: CustomInputSlug,
-      hidden: true,
+      validation: (Rule) => Rule.required(),
     },
     // Define the product image field with additional properties
     {
-      name: "productImage",
+      name: "mainProductImage",
       title: "Product Image",
       type: "image",
-      description: "Upload a Product picture",
+      description: "Upload a Main Product picture",
+      validation: (rule) => rule.required(),
       options: { hotspot: true }, // Enable hotspot for image editing
-      fields: [
-        // Define additional fields related to the product image
-        { name: "alt", title: "Alt", type: "string" },
-        { name: "gender", title: "Gender", type: "string" },
-        { name: "category", title: "Category", type: "string" },
-        { name: "price", title: "Price", type: "number" },
-        { name: "quantity", title: "Quantity", type: "number" },
-      ],
+    },
+    {
+      name: "productImage",
+      title: "Product Images",
+      type: "array",
+      of: [{ type: "image" }],
+      description: "Upload more product pictures",
+      options: { hotspot: true },
+    },
+    {
+      name: "productColors",
+      title: "Product Colors",
+      type: "array",
+      of: [{ type: "string" }],
+      description: "Hexadecimal color code (e.g., #RRGGBB)",
+      validation: (Rule) =>
+        Rule.custom((colors:any) =>
+          colors.every((color:any) => /^#[0-9A-Fa-f]{6}$/.test(color))
+        ).error("Please enter valid hexadecimal color codes (e.g., #RRGGBB)"),
+    },
+
+    // Define additional fields related to the product image
+    {
+      name: "category",
+      title: "Category",
+      type: "string",
+      validation: (rule) => rule.required(),
+      options: {
+        list: [
+          { title: "Male", value: "Male" },
+          { title: "Female", value: "Female" },
+          { title: "Kids", value: "Kids" },
+        ],
+      },
+    },
+    {
+      name: "subcategory",
+      title: "Sub Category",
+      type: "string",
+      description: "(e.g., Sweater, T-Shirt, Jeans)",
+    },
+    {
+      name: "price",
+      title: "Price",
+      type: "number",
+      validation: (rule) => rule.required(),
+    },
+    {
+      name: "quantity",
+      title: "Quantity",
+      type: "number",
+      validation: (rule) => rule.required(),
     },
   ],
 });

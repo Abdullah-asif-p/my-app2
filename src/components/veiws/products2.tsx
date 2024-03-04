@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Products2() {
   return (
@@ -38,30 +39,36 @@ export default function Products2() {
           </div>
         </div>
         <div className="flex  flex-row gap-2 sm:gap-8  justify-between mdm:justify-evenly items-center ">
-          <div className="bg-zinc-200">
+          <Link href={"/allProducts/raglan-t-shirt"} className="bg-zinc-200">
             <div className="p-1 sm:p-3">
-              <p className=" text-base sm:text-lg ">Flex Sweatshirt</p>
-              <span className="text-sm sm:text-base line-through font-light">
+              <p className=" text-xs sm:text-lg line-clamp-1">Raglan T-Shirt</p>
+              <span className="text-[0.5rem] sm:text-base line-through font-light">
                 $100.00
               </span>
-              <span className="text-sm sm:text-lg  ml-1">$75.00</span>
+              <span className="text-xs sm:text-lg  ml-1">$75.00</span>
             </div>
             <Image
               src={"/Images/event2.png"}
               alt="img"
               width={280}
               height={360}
-              className="object-cover  pt-1"
+              className="object-fit  pt-1"
             />
-          </div>
-          <div className="bg-zinc-200">
+          </Link>
+
+          <Link
+            href={"/allProducts/flex-push-button-bomber"}
+            className="bg-zinc-200"
+          >
             <div className="flex flex-col justify-between">
               <div className=" p-1 sm:p-3">
-                <p className=" text-base sm:text-lg ">Flex Sweatshirt</p>
-                <span className="text-sm sm:text-base line-through font-light">
+                <p className=" text-xs sm:text-lg line-clamp-1 ">
+                  Flex Push Button bomber
+                </p>
+                <span className="text-[0.5rem] sm:text-base line-through font-light">
                   $225.00
                 </span>
-                <span className="text-sm sm:text-lg ml-1">$190.00</span>
+                <span className="text-xs sm:text-lg  ml-1">$190.00</span>
               </div>
               <Image
                 src={"/Images/event3.png"}
@@ -71,7 +78,7 @@ export default function Products2() {
                 className="object-fit pt-1"
               />
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

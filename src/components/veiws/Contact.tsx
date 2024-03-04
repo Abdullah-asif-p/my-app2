@@ -1,17 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
-export default function End() {
+export default function Contact() {
   return (
-    <div className="flex lg:flex-row flex-col items-start justify-between gap-16 xl:px-24 sm:px-11 px-8 pt-8  sm:pt-24 mb-24">
-      <div className=" flex flex-col gap-14 w-1/2">
+    <div className="flex flex-wrap sm:flex-nowrapflex-col items-start justify-between gap-6 md:gap-10 lg:gap-16 xl:px-24 sm:px-11 px-8 pt-8  sm:pt-24 mb-24">
+      <div className=" flex flex-col gap-8 mr-8  ">
         <Link href={"/"} className="flex-shrink-0">
-          <Image src={"/Logo.png"} alt="Logo" width={200} height={40} />
+          <Image src={"/Logo.png"} alt="Logo" width={200} height={35} />
         </Link>
-        <p className="">
+        <p>
           Small, artisan label that offers a thoughtfully curated collection of
           high quality everyday essentials made.
         </p>
-        <div className=" flex gap-5 ">
+        <div className="flex gap-4 ">
           <Link href={"/"} className=" rounded-md bg-gray-200 py-2 px-2">
             <svg
               enable-background="new 0 0 56.693 56.693"
@@ -50,24 +50,44 @@ export default function End() {
           </Link>
         </div>
       </div>
-      <div className=" flex flex-col  pt-4 gap-4 text-gray-500">
+      <div className=" flex flex-col pt-4 gap-4 text-gray-500">
         <h3 className="text-xl font-bold ">Company</h3>
-        <Link href={"/"}>About</Link>
-        <Link href={"/"}>Terms of Use</Link>
-        <Link href={"/"}>Privacy Policy</Link>
-        <Link href={"/"}>How it Works</Link>
-        <Link href={"/"}>Contact Us</Link>
+        <Link href={"/"} className="md:w-40">
+          About
+        </Link>
+        <Link href={"/"} className="md:w-40">
+          Terms of Use
+        </Link>
+        <Link href={"/"} className="md:w-40">
+          Privacy Policy
+        </Link>
+        <Link href={"/"} className="md:w-40">
+          How it Works
+        </Link>
+        <Link href={"/"} className="md:w-40">
+          Contact Us
+        </Link>
       </div>
-      <div className=" flex flex-col  pt-4  gap-4 text-gray-500">
+      <div className="flex flex-col pt-4  gap-4 text-gray-500">
         <h3 className="text-xl font-bold ">Support</h3>
-        <Link href={"/"}>Support Carrer</Link>
-        <Link href={"/"}>24h Service</Link>
-        <Link href={"/"}>Quick Chat</Link>
+        <Link href={"/"} className="md:w-40">
+          Support Carrer
+        </Link>
+        <Link href={"/"} className="md:w-40">
+          24h Service
+        </Link>
+        <Link href={"/"} className="md:w-40">
+          Quick Chat
+        </Link>
       </div>
       <div className=" flex flex-col pt-4 gap-4 text-gray-500">
         <h3 className="text-xl font-bold ">Contact</h3>
-        <Link href={"/"}>Whatsapp</Link>
-        <Link href={"/"}>Support 24h</Link>
+        <Link href={"/"} className="md:w-40">
+          Whatsapp
+        </Link>
+        <Link href={"/"} className="md:w-40">
+          Support 24h
+        </Link>
       </div>
     </div>
   );

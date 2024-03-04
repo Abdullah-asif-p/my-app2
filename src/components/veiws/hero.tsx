@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <header className="relative flex justify-between gap-16 mt-16  sm:mt-16 xl:px-24 sm:px-11 px-8 ">
+    <header className="relative flex justify-between gap-16 mt-16 px-5 sm:px-10 mdm:px-16 2xl:px-24 ">
       <div className="flex flex-1 flex-col justify-between ">
         <div className="flex flex-col justify-center gap-10">
           <span className="flex items-center justify-center bg-blue-100 h-[40px] w-[120px]  font-semibold  text-blue-800 rounded-md p-2  ">
@@ -19,8 +19,8 @@ export default function Hero() {
             wear Dine outfits.
           </p>
           <Link
-            href={"/allProduct"}
-            className="flex  items-center gap-2 transition  transform ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 text-white border-gray-400 border-2 text-lg bg-gray-900 font-semibold text-center px-24 py-4 mx-auto"
+            href={"/allProducts"}
+            className="flex  items-center gap-2 transition  transform ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 text-white border-gray-400 border-2 text-lg 2xl:text-xl bg-gray-900 font-semibold text-center px-24 py-4 mx-auto"
           >
             <ShoppingCart className="" />
             Start Shoping

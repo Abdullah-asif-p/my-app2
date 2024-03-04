@@ -20,6 +20,7 @@ const config = {
     extend: {
       screens: {
         mdm: "1070px",
+        xsm: "450px",
       },
       fontSize: {
         lgx: ["3.5rem", "55px"],

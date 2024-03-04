@@ -17,6 +17,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@sanity/image-url": "1",
+    "@sanity/types": "^3.29.1",
     "@sanity/ui": "^2.0.3",
     "@sanity/vision": "3",
     "class-variance-authority": "^0.7.0",
@@ -29,10 +30,13 @@
     "react-dom": "^18",
     "react-icons": "^5.0.1",
     "sanity": "3",
+    "sharp": "^0.33.2",
     "slugify": "^1.6.6",
     "styled-components": "6",
+    "swiper": "^11.0.6",
     "tailwind-merge": "^2.2.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "transliteration": "^2.3.5"
   },
   "devDependencies": {
     "@types/node": "^20",

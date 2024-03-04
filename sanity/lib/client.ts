@@ -4,11 +4,11 @@ import { apiVersion, dataset, projectId, useCdn } from '../env'
 import  ImageUrlBuilder  from '@sanity/image-url'
 
 export const client = createClient({
-  apiVersion,
+  apiVersion: "2024-02-16",
   dataset,
   projectId,
   useCdn,
-})
+});
 
 const builder = ImageUrlBuilder(client)
 
