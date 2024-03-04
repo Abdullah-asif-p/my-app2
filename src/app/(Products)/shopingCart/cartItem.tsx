@@ -1,6 +1,4 @@
 "use client";
-// import { CartItem, useCartContext } from "@/app/Context/cartProvider";
-import { useEffect, useState } from "react";
 import { urlFor } from "../../../../sanity/lib/client";
 import Image from "next/image";
 import { MdDeleteOutline } from "react-icons/md";
@@ -29,40 +27,44 @@ export default function ProductItem({
         alt="image"
         className="shadow rounded-2xl  w-[150px] h-[160px] xsm:h-[200px] xsm:w-[180px]"
       />
-      <div className="flex flex-col items-center sm:items-start gap-1 xsm:gap-3 sm:gap-5 mt-1 ">
-        <div className="flex flex-col gap-1">
-          <h3 className="text-xl sm:text-2xl   text-gray-700">{product.Name}</h3>
-          <p className=" text-base sm:text-lg text-gray-400">{product.Subcategory}</p>
+      <div className="flex flex-col sm:items-start gap-1 xsm:gap-3 sm:gap-5 mt-1 ">
+        <div className="flex flex-col gap-1  ">
+          <h3 className=" max-xsm:text-xs max-sm:text-sm text-lg md:text-2xl   text-gray-700">
+            {product.Name}
+          </h3>
+          <p className=" max-xsm:text-[0.5rem]  max-sm:text-xs text-base md:text-lg text-gray-400">
+            {product.Subcategory}
+          </p>
         </div>
-        <div className="flex items-center gap-2 sm:gap-4 pt-2">
+        <div className="flex items-center justify-center  gap-2 sm:gap-4 pt-2">
           <button
-            className="h-6 w-6 rounded-full font-semibold text-xs shadow hover:bg-zinc-200"
+            className="h-4 w-4 sm:h-6 sm:w-6 text-[0.5rem] sm:text-xs rounded-full font-semibold  shadow hover:bg-zinc-200"
             onClick={() => decrementCount(index)}
           >
             ━
           </button>
-          <span className="text-base">{pCount}</span>
+          <span className="text-xs sm:text-sm md:text-base">{pCount}</span>
           <button
-            className="h-6 w-6 rounded-full font-semibold shadow hover:bg-zinc-200"
+            className="h-4 w-4 sm:h-6 sm:w-6 text-xs sm:text-base rounded-full font-semibold shadow hover:bg-zinc-200"
             onClick={() => incrementCount(index)}
           >
             ＋
           </button>
         </div>
-        <div className="flex gap-4 sm:gap-12 text-xs sm:text-sm  mt-4 items-center text-gray-500 w-full  ">
+        <div className="flex gap-6 sm:gap-12 text-[0.5rem]  xsm:text-sm  mt-4 max-sm:items-center max-sm:justify-center text-gray-500 sm:w-full  ">
           <p>
             Size: <span>{product.Size}</span>
           </p>
-          <div className="flex items-center">
+          <div className="flex items-center ">
             <p>Color:</p>
             <p
               style={{ backgroundColor: product.Color }}
-              className={`h-3 w-3 sm:w-4 sm:h-4 rounded-full ml-1sm:ml-2`}
+              className={`h-3 w-3 sm:w-4 sm:h-4 rounded-full ml-1 sm:ml-2`}
             ></p>
           </div>
         </div>
       </div>
-      <p className="sm:absolute sm:right-0 sm:top-2 sm:mt-2 sm:mr-2 font-semibold text-gray-500 text-base md:text-lg">{`$${
+      <p className="sm:absolute sm:right-0 top-1 md:mt-1 sm:mr-2 font-semibold text-gray-500 text-sm sm:text-base md:text-lg">{`$${
         product.Price * pCount
       }`}</p>
       <div className="sm:absolute sm:right-4 bottom-0 text-gray-500">

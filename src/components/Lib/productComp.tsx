@@ -75,11 +75,11 @@ export default function ProductPageComp({
               <Image
                 key={index}
                 src={urlFor(src).url()}
-                width={100}
-                height={120}
+                width={160}
+                height={180}
                 alt="images"
                 onMouseEnter={() => handleThumbnailHover(index)}
-                className=" hover:border hover:border-gray-400 hover:border-spacing-4"
+                className=" hover:border hover:border-gray-400 hover:border-spacing-4 w-full "
               />
             ))}
           </div>
@@ -90,6 +90,7 @@ export default function ProductPageComp({
                 width={1155}
                 height={1500}
                 alt="images"
+                className="object fit"
               />
             )}
           </div>
@@ -178,10 +179,10 @@ export default function ProductPageComp({
         </div>
       </div>
       <div className="relative py-24 xl:px-28">
-        <h2 className="text-2xl font-bold ">Product Information</h2>
-        <div className="absolute  inset-y-12">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 ">Product Information</h2>
+        {/* <div className="absolute  inset-y-12">
           <h1 className="  text-7xl font-extrabold text-gray-100">Overveiw</h1>
-        </div>
+        </div> */}
         <div className="flex flex-col gap-20 border-t-2 ">
           <div className=" flex flex-col sm:flex-row gap-6">
             <h2 className="text-2xl sm:w-[30%] font-semibold text-gray-500">
