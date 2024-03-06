@@ -9,12 +9,14 @@ export default function About() {
       </h1>
       <div className="relative">
         <div className="flex justify-between items-center">
-          <div className="absolute inset-0 flex items-center justify-center  text-gray-200 text-[5.5rem] mdm:text-[6.875rem] mdm:leading-[110px] opacity-45  font-extrabold">
+          <div className="absolute inset-0 flex items-center justify-center  text-gray-200 text-[4.7rem] xsm:text-[5.5rem] mdm:text-[6.875rem] mdm:leading-[110px] opacity-45  font-extrabold">
             <p>Different from others</p>
           </div>
           <div className="grid grid-cols-2 gap-16 2xl:gap-32">
-            <div className=" flex flex-col gap-2
-             mdm:w-40">
+            <div
+              className=" flex flex-col gap-2
+             mdm:w-40"
+            >
               <h3 className="text-lg font-semibold ">
                 Using Good Quality Materials
               </h3>
@@ -52,7 +54,7 @@ export default function About() {
             color is the actual natural color of the fiber, undyed and 100%
             traceable.
           </p>
-          <button className=" bg-black text-white p-1 ml-4 text-lg rounded-md transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-500">
+          <button className="flex bg-black text-white p-1 w-[60%] 2xl:w-[70%] mx-auto items-center justify-center text-lg rounded-md transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-500">
             <Link href={"/allProducts"}>See All Products</Link>
           </button>
         </div>

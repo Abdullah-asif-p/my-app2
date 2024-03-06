@@ -1,5 +1,5 @@
 "use client";
-import { urlFor } from "../../../../sanity/lib/client";
+import { urlFor } from "../../../sanity/lib/client";
 import Image from "next/image";
 import { MdDeleteOutline } from "react-icons/md";
 import { CartItem, useCartContext } from "@/app/Context/cartProvider";

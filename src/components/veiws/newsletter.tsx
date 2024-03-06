@@ -1,12 +1,14 @@
 export default function Newsletter() {
   return (
-    <div className="mx-2">
-      <div className="relative flex flex-col items-center justify-center  my-10 ">
-        <h1 className="text-4xl font-bold pb-4 mb-1">Subscribe Our Newsletter</h1>
-        <div className="absolute inset-0 pt-16 flex items-center justify-center  text-gray-200 mdm:text-[6.875rem] mdm:leading-[110px] opacity-35 text-6xl font-extrabold">
+    <div className="mx-2 mb-8 mt-4">
+      <div className="relative flex flex-col items-center justify-center max-sm:mx-4 my-10 ">
+        <h1 className="text-4xl font-bold pb-4 mb-1">
+          Subscribe Our Newsletter
+        </h1>
+        <div className="absolute inset-0 pt-16 flex items-center justify-center  text-gray-200 mdm:text-[6.875rem] mdm:leading-[110px] opacity-35 text-[3.5rem] xsm:text-7xl md:text-[6rem]  font-extrabold">
           Newsletter
         </div>
-        <h3 className=" pt-2 text-black ">
+        <h3 className=" xsm:pt-1 xsm:text-lg font-medium text-black ">
           Get the latest information and promo offers directly
         </h3>
       </div>

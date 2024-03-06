@@ -8,14 +8,17 @@ export default function Products2() {
         <span className=" text-blue-600 tracking-widest font-extrabold text-sm font-mono">
           PROMOTIONS
         </span>
-        <h2 className=" text-4xl">Our Promotions Events</h2>
+        <h2 className="text-3xl sm:text-4xl">Our Promotions Events</h2>
       </div>
       <div className="flex mdm:flex-row flex-col justify-between gap-8">
         <div className=" flex mdm:flex-1 2xl:flex-2  flex-col gap-8">
           <div className="flex flex-col mdm:flex-row xl:justify-between justify-center  items-center bg-slate-200 ">
             <div className="px-4 ">
-              <h3 className=" text-3xl font-bold">
-                GET UP TO <span className=" font-extrabold text-4xl ">60%</span>
+              <h3 className=" text-2xl sm:text-3xl font-bold">
+                GET UP TO{" "}
+                <span className=" font-extrabold text-3xl sm:text-4xl ">
+                  60%
+                </span>
               </h3>
               <p>For the summer season</p>
             </div>
@@ -41,11 +44,13 @@ export default function Products2() {
         <div className="flex  flex-row gap-2 sm:gap-8  justify-between mdm:justify-evenly items-center ">
           <Link href={"/allProducts/raglan-t-shirt"} className="bg-zinc-200">
             <div className="p-1 sm:p-3">
-              <p className=" text-xs sm:text-lg line-clamp-1">Raglan T-Shirt</p>
-              <span className="text-[0.5rem] sm:text-base line-through font-light">
+              <p className=" text-base sm:text-lg line-clamp-1">
+                Raglan T-Shirt
+              </p>
+              <span className="text-xs  sm:text-base line-through font-light">
                 $100.00
               </span>
-              <span className="text-xs sm:text-lg  ml-1">$75.00</span>
+              <span className="text-sm sm:text-lg  ml-1">$75.00</span>
             </div>
             <Image
               src={"/Images/event2.png"}
@@ -62,13 +67,13 @@ export default function Products2() {
           >
             <div className="flex flex-col justify-between">
               <div className=" p-1 sm:p-3">
-                <p className=" text-xs sm:text-lg line-clamp-1 ">
-                  Flex Push Button bomber
+                <p className=" text-base sm:text-lg line-clamp-1 ">
+                  Flex Push Button
                 </p>
-                <span className="text-[0.5rem] sm:text-base line-through font-light">
+                <span className="text-xs sm:text-base line-through font-light">
                   $225.00
                 </span>
-                <span className="text-xs sm:text-lg  ml-1">$190.00</span>
+                <span className="text-sm sm:text-lg  ml-1">$190.00</span>
               </div>
               <Image
                 src={"/Images/event3.png"}

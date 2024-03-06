@@ -75,11 +75,11 @@ export default function ProductPageComp({
               <Image
                 key={index}
                 src={urlFor(src).url()}
-                width={160}
-                height={180}
+                width={120}
+                height={140}
                 alt="images"
                 onMouseEnter={() => handleThumbnailHover(index)}
-                className=" hover:border hover:border-gray-400 hover:border-spacing-4 w-full "
+                className=" hover:border hover:border-gray-400 hover:border-spacing-4  max-sm:w-full "
               />
             ))}
           </div>
@@ -87,17 +87,17 @@ export default function ProductPageComp({
             {showImage && (
               <Image
                 src={urlFor(showImage)?.url()}
-                width={1155}
-                height={1500}
+                width={900}
+                height={750}
                 alt="images"
-                className="object fit"
+                className=""
               />
             )}
           </div>
         </div>
         <div className="flex flex-col gap-12 lg:gap-8 items-center pt-12 lg:pt-32 pl-4 mx-auto">
           <div className="flex flex-col items-center justify-center gap-2">
-            <h1 className="text-2xl sm:text-3xl lg:text-2xl  xl:text-[2rem] font-bold">
+            <h1 className="text-2xl sm:text-3xl lg:text-2xl  xl:text-[2.5rem] font-semibold">
               {productName}
             </h1>
             <span className=" text-lg font-bold text-gray-500">
@@ -105,7 +105,7 @@ export default function ProductPageComp({
             </span>
           </div>
 
-          <div className="flex gap-2 sm:gap-4 lg:gap-2 xl:gap-7 ">
+          <div className="flex gap-2 sm:gap-4 lg:gap-4 xl:gap-7 ">
             <button
               className={`sizeBtn ${selectedSize === "XS" ? "selected" : ""}`}
               onClick={() => handleSizeSelection("XS")}
@@ -179,7 +179,9 @@ export default function ProductPageComp({
         </div>
       </div>
       <div className="relative py-24 xl:px-28">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 ">Product Information</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 ">
+          Product Information
+        </h2>
         {/* <div className="absolute  inset-y-12">
           <h1 className="  text-7xl font-extrabold text-gray-100">Overveiw</h1>
         </div> */}

@@ -20,9 +20,9 @@ export default function Hero() {
           </p>
           <Link
             href={"/allProducts"}
-            className="flex  items-center gap-2 transition  transform ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 text-white border-gray-400 border-2 text-lg 2xl:text-xl bg-gray-900 font-semibold text-center px-24 py-4 mx-auto"
+            className="flex  items-center justify-center gap-2 btn hover:ring-2  hover:ring-offset-1 hover:ring-gray-900  text-white rounded-sm shadow text-lg xl:text-xl 2xl:text-2xl xl:mt10 2xl:mt-20 bg-sky-950 font-medium  px-8 2xl:py-6 2xl:px-12 xl:px-10 xl:py-5 py-4 mx-auto"
           >
-            <ShoppingCart className="" />
+            <ShoppingCart />
             Start Shoping
           </Link>
         </div>
@@ -66,5 +66,4 @@ export default function Hero() {
       </div>
     </header>
   );
-
 }
