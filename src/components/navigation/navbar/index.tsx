@@ -25,6 +25,7 @@ export default function Navbar({ toggle }: { toggle: () => void }) {
       </div>
       <SearchIcon />
 
+      <div className="hidden mdm:block"><CartIcon/></div>
       <button
         type="button"
         className="inline-flex items-center mdm:hidden"
@@ -32,10 +33,6 @@ export default function Navbar({ toggle }: { toggle: () => void }) {
       >
         <RiMenu3Line className="text-2xl" />
       </button>
-      <div className="hidden mdm:block">
-
-      <CartIcon/>
-      </div>
     </nav>
   );
 }

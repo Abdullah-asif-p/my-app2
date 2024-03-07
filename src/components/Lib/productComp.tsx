@@ -70,7 +70,7 @@ export default function ProductPageComp({
     <div className="px-5 sm:px-10 mdm:px-16 2xl:px-24 py-16">
       <div className="flex flex-col lg:flex-row justify-between">
         <div className="flex gap-2 sm:gap-4 ">
-          <div className="flex flex-col gap-2 ">
+          <div className="flex flex-col gap-2">
             {allImages.map((src: any, index: number) => (
               <Image
                 key={index}

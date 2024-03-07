@@ -19,19 +19,21 @@ export default function MProducts({
 }: mProductsProps) {
   return (
     <>
-      <Image
-        src={src}
-        width={width}
-        height={height}
-        alt="image"
-        className="object-cover  max-xsm:scale-90 "
-      />
+      <div className=" ">
+        <Image
+          src={src}
+          width={width}
+          height={height}
+          alt="image"
+          className="object-cover  max-xsm:scale-90  "
+        />
+      </div>
 
-      <div className="flex flex-col max-xsm:scale-90  ">
-        <p className="text-gray-500  items-center justify-between text-lg flex mt-[-1rem] xsm:mt-2">
-          {text}
-          <span>{`$${price}`}</span>
-        </p>
+      <div className="flex flex-col  max-xsm:scale-90    ">
+        <div className=" text-gray-500  justify-between items-center  text-lg flex mt-[-1rem] xsm:mt-2">
+          <p className="">{text}</p>
+          <span className="">{`$${price}`}</span>
+        </div>
         <div className=" flex items-center justify-center mt-1 xsm:mt-0 gap-2">
           {productColors?.map((colors, index) => (
             <div

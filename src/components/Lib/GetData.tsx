@@ -27,7 +27,6 @@ export async function getallData() {
     "image" :mainProductImage.asset,
     "images": productImage[].asset,
 }`;
-
   const data = await client.fetch(query);
   return data;
 }

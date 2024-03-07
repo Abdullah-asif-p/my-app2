@@ -7,7 +7,7 @@ export default async function FemaleProducts() {
   const data = await getQueryData("Female");
   return (
     <div className="px-5  sm:px-10 mdm:px-16 xl:px-24 2xl:px-32 py-16 ">
-      <div className="grid grid-cols-1 xsm:grid-cols-2   mdm:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4  grid-flow-row gap-8">
+      <div className="grid grid-cols-1 xsm:grid-cols-2   mdm:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4  grid-flow-row gap-8 ">
         {data.map(
           (product: any, index: number) =>
             product.category === "Female" && (
